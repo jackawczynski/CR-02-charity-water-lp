@@ -8,34 +8,87 @@ body {
     color: #333; /* Dark text color for readability */
 }
 
+/* Navigation Bar */
+#navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #fff; /* White background for contrast */
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: 10;
+}
+
+#logo {
+    height: 40px; /* Adjust logo size */
+}
+
+#nav-buttons {
+    display: flex;
+    gap: 10px; /* Space between buttons */
+}
+
+.nav-btn {
+    background-color: #cbccd1; /* Light gray button background */
+    color: #1a1a1a; /* Dark text color */
+    padding: 6px 13px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 0.8em;
+    font-weight: bold;
+}
+
+.nav-btn:hover {
+    background-color: #cbccd1; /* Slightly darker gray on hover */
+}
+
 /* Hero Section */
 #hero {
-    background-image: url('CW_hero.jpg'); /* Set the background image */
+    position: relative; /* Enable positioning for child elements */
+    background-image: url('./images/CW_hero.jpg'); /* Set the background image */
     background-size: cover; /* Ensure the image covers the entire section */
     background-position: center; /* Center the image */
     background-repeat: no-repeat; /* Prevent the image from repeating */
-    padding: 60px 20px; /* Adjust padding for better spacing */
-    color: #fff; /* White text for contrast */
-    text-align: center;
+    height: 450px; /* Set a fixed height for the hero section */
 }
 
-#hero h1 {
-    font-size: 2.5em;
+/* Text overlay for the hero section */
+#hero-text {
+    position: absolute; /* Position the text on top of the image */
+    top: 138%; 
+    left: 3%;
+    margin-left: 10px;
+    margin-top: 50px;
+    color: #fff; /* White text for contrast */
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7); /* Add shadow for better readability */
+    text-align: center; /* Center align the text */
+    max-width: 400px; /* Limit the width of the text */
+}
+
+#hero-text h1 {
+    font-size: 1.8em; /* Large headline */
+    margin-bottom: 8px;
+}
+
+#hero-text p {
+    font-size: 1em; /* Slightly smaller subheadline */
     margin-bottom: 10px;
 }
 
-#hero p {
-    font-size: 1.2em;
-    margin-bottom: 20px;
-}
-
-#hero .btn {
+#hero-text .btn {
     display: inline-block;
-    background-color: #00b4d8; /* Lighter blue for button */
+    background-color: #77a8bb; /* Lighter blue for button */
     color: #fff;
     padding: 10px 20px;
     text-decoration: none;
-    border-radius: 5px;
+    border-radius: 2px;
+    font-weight: bold;
+}
+
+#hero-text .btn:hover {
+    background-color: #003366; /* Slightly darker blue on hover */
 }
 
 /* Story Section */
@@ -57,7 +110,7 @@ body {
 
 /* Call-to-Action Section */
 #call-to-action {
-    background-color: #023e8a; /* Darker blue for emphasis */
+    background-color: #003366; /* Darker blue for emphasis */
     color: #fff;
     text-align: center;
     padding: 40px 20px;
@@ -75,7 +128,7 @@ body {
 
 #call-to-action .btn {
     display: inline-block;
-    background-color: #00b4d8; /* Lighter blue for button */
+    background-color: #77a8bb; /* Lighter blue for button */
     color: #fff;
     padding: 10px 20px;
     text-decoration: none;
@@ -108,7 +161,7 @@ body {
 /* Donation Section */
 #donation {
     background-color: #023e8a; /* Darker blue for emphasis */
-    color: #fff; /* White text for contrast */
+    color: #fff7e1; /* White text for contrast */
     text-align: center;
     padding: 40px 20px;
 }
@@ -125,7 +178,7 @@ body {
 
 #donation .btn {
     display: inline-block;
-    background-color: #00b4d8; /* Lighter blue for button */
+    background-color: #77a8bb; /* Lighter blue for button */
     color: #fff;
     padding: 15px 30px; /* Larger button for emphasis */
     text-decoration: none;
@@ -134,6 +187,6 @@ body {
 }
 
 #donation .btn:hover {
-    background-color: #0096c7; /* Slightly darker blue on hover */
+    background-color: #77a8bb; /* Slightly darker blue on hover */
 }
 
